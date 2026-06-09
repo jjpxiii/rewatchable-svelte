@@ -1,0 +1,24 @@
+{
+  "name": "rewatchable",
+  "account_id": "113b732aa346b9bae1f49c0180e0c146",
+  "main": "./.cloudflare/worker.js",
+  "assets": {
+    "binding": "static",
+    "directory": ".svelte-kit/cloudflare"
+  },
+  "build": {
+    "command": "pnpm build"
+  },
+  "compatibility_date": "2026-02-16",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "rewatchable-db",
+      "database_id": "9f2157a7-451b-4853-89a8-878fcb018257",
+      "migrations_dir": "drizzle"
+    }
+  ]
+}

@@ -6,20 +6,28 @@
 		data: { gameStats: GameStats[]; lastWeek: number };
 	}
 
-	let sortOrder = $state('offensive');
+	let sortOrder = $state('total');
 	let selectedYear = $state(5);
 	let selectedWeek = $state(0);
+	let searchTerm = $state('');
 
 	const { data } = $props() as GameListProps;
-	const gameStats: GameStats[] = data.gameStats;
-	const lastWeek = data.lastWeek;
 
-	let gameStatsFiltered = $derived(() =>
-		selectedWeek > 0 ? gameStats.filter((game) => game.week === selectedWeek) : gameStats
-	);
+	const gameStatsFiltered = $derived.by(() => {
+		let filtered =
+			selectedWeek > 0 ? data.gameStats.filter((game) => game.week === selectedWeek) : data.gameStats;
+		if (searchTerm) {
+			filtered = filtered.filter((game) =>
+				game.fullName.toLowerCase().includes(searchTerm.toLowerCase())
+			);
+		}
+		return filtered;
+	});
 
-	let gameStatsSorted = $derived(() =>
-		[...gameStatsFiltered()].sort((a, b) =>
+	let gameStatsSorted = $state<GameStats[]>([]);
+
+	$effect(() => {
+		gameStatsSorted = [...gameStatsFiltered].sort((a, b) =>
 			sortOrder === 'offensive'
 				? b.offensiveRating - a.offensiveRating
 				: sortOrder === 'defensive'
@@ -27,28 +35,28 @@
 					: sortOrder === 'scenario'
 						? b.scenarioRating - a.scenarioRating
 						: b.totalRating - a.totalRating
-		)
-	);
+		);
+	});
 
-	let statistics = $derived(() => {
-		const totalRatings = gameStatsFiltered().map((game) => game.totalRating);
+	const statistics = $derived.by(() => {
+		const totalRatings = gameStatsFiltered.map((game) => game.totalRating);
 		const totalMin = Math.min(...totalRatings);
 		const totalMax = Math.max(...totalRatings);
 		const totalMean = totalRatings.reduce((acc, rating) => acc + rating, 0) / totalRatings.length;
 
-		const offensiveRatings = gameStatsFiltered().map((game) => game.offensiveRating);
+		const offensiveRatings = gameStatsFiltered.map((game) => game.offensiveRating);
 		const offensiveMin = Math.min(...offensiveRatings);
 		const offensiveMax = Math.max(...offensiveRatings);
 		const offensiveMean =
 			offensiveRatings.reduce((acc, rating) => acc + rating, 0) / offensiveRatings.length;
 
-		const defensiveRatings = gameStatsFiltered().map((game) => game.defensiveBigPlays);
+		const defensiveRatings = gameStatsFiltered.map((game) => game.defensiveBigPlays);
 		const defensiveMin = Math.min(...defensiveRatings);
 		const defensiveMax = Math.max(...defensiveRatings);
 		const defensiveMean =
 			defensiveRatings.reduce((acc, rating) => acc + rating, 0) / defensiveRatings.length;
 
-		const scenarioRatings = gameStatsFiltered().map((game) => game.scenarioRating);
+		const scenarioRatings = gameStatsFiltered.map((game) => game.scenarioRating);
 		const scenarioMin = Math.min(...scenarioRatings);
 		const scenarioMax = Math.max(...scenarioRatings);
 		const scenarioMean =
@@ -60,6 +68,78 @@
 			defensive: { min: defensiveMin, max: defensiveMax, mean: defensiveMean },
 			scenario: { min: scenarioMin, max: scenarioMax, mean: scenarioMean }
 		};
+	});
+
+	const statisticsPerTeam = $derived.by(() => {
+		const teams = [
+			'ARI',
+			'ATL',
+			'BAL',
+			'BUF',
+			'CAR',
+			'CHI',
+			'CIN',
+			'CLE',
+			'DAL',
+			'DEN',
+			'DET',
+			'GB',
+			'HOU',
+			'IND',
+			'JAX',
+			'KC',
+			'LAC',
+			'LAR',
+			'LV',
+			'MIA',
+			'MIN',
+			'NE',
+			'NO',
+			'NYG',
+			'NYJ',
+			'PHI',
+			'PIT',
+			'SEA',
+			'SF',
+			'TB',
+			'TEN',
+			'WSH'
+		];
+		const res: any[] = [];
+		teams.forEach((team) => {
+			const gameStatsForTeam = data.gameStats.filter((gs) => gs.shortName.indexOf(team) > -1);
+			const totalRatings = gameStatsForTeam.map((game) => game.totalRating);
+			const totalMin = Math.min(...totalRatings);
+			const totalMax = Math.max(...totalRatings);
+			const totalMean = totalRatings.reduce((acc, rating) => acc + rating, 0) / totalRatings.length;
+
+			const offensiveRatings = gameStatsForTeam.map((game) => game.offensiveRating);
+			const offensiveMin = Math.min(...offensiveRatings);
+			const offensiveMax = Math.max(...offensiveRatings);
+			const offensiveMean =
+				offensiveRatings.reduce((acc, rating) => acc + rating, 0) / offensiveRatings.length;
+
+			const defensiveRatings = gameStatsForTeam.map((game) => game.defensiveBigPlays);
+			const defensiveMin = Math.min(...defensiveRatings);
+			const defensiveMax = Math.max(...defensiveRatings);
+			const defensiveMean =
+				defensiveRatings.reduce((acc, rating) => acc + rating, 0) / defensiveRatings.length;
+
+			const scenarioRatings = gameStatsForTeam.map((game) => game.scenarioRating);
+			const scenarioMin = Math.min(...scenarioRatings);
+			const scenarioMax = Math.max(...scenarioRatings);
+			const scenarioMean =
+				scenarioRatings.reduce((acc, rating) => acc + rating, 0) / scenarioRatings.length;
+
+			res.push({
+				teamName: team,
+				total: { min: totalMin, max: totalMax, mean: totalMean },
+				offensive: { min: offensiveMin, max: offensiveMax, mean: offensiveMean },
+				defensive: { min: defensiveMin, max: defensiveMax, mean: defensiveMean },
+				scenario: { min: scenarioMin, max: scenarioMax, mean: scenarioMean }
+			});
+		});
+		return res;
 	});
 </script>
 
@@ -106,21 +186,20 @@
     </button>
   </div> -->
 		<div>
-			<p class="flex-grow-1 font-bold text-xl">Year</p>
+			<p class="grow font-bold text-xl">Year</p>
 			{#each { length: 6 }, i}
 				<button
 					class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 {selectedYear === i
 						? 'bg-orange-400 text-white'
 						: ''}"
-					onclick={() => (selectedYear = i)}
 				>
 					<a href="/{2020 + i}">{i === 0 ? 'All' : 2020 + i}</a>
 				</button>
 			{/each}
 		</div>
 		<div>
-			<p class="flex-grow-1 font-bold text-xl">Weeks</p>
-			{#each { length: lastWeek + 1 }, i}
+			<p class="grow font-bold text-xl">Weeks</p>
+			{#each { length: data.lastWeek + 1 }, i}
 				<button
 					class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 {selectedWeek === i
 						? 'bg-orange-400 text-white'
@@ -132,23 +211,27 @@
 			{/each}
 		</div>
 		<div>
-			<p class="flex-grow-1 font-bold text-xl">Statistics</p>
+			<p class="grow font-bold text-xl">Search</p>
+			<input type="text" placeholder="Search games..." bind:value={searchTerm} />
+		</div>
+		<div>
+			<p class="grow font-bold text-xl">Statistics</p>
 			<p>Criteria : min / max / mean</p>
 			<p>
-				Total : {statistics().total.min.toFixed(2)} / {statistics().total.max.toFixed(2)} / {statistics().total.mean.toFixed(
+				Total : {statistics.total.min.toFixed(2)} / {statistics.total.max.toFixed(2)} / {statistics.total.mean.toFixed(
 					2
 				)}
 			</p>
 			<p>
-				Offense: {statistics().offensive.min.toFixed(2)} / {statistics().offensive.max.toFixed(2)} /
-				{statistics().offensive.mean.toFixed(2)}
+				Offense: {statistics.offensive.min.toFixed(2)} / {statistics.offensive.max.toFixed(2)} /
+				{statistics.offensive.mean.toFixed(2)}
 			</p>
 			<p>
-				Defense: {statistics().defensive.min.toFixed(2)} / {statistics().defensive.max.toFixed(2)} /
-				{statistics().defensive.mean.toFixed(2)}
+				Defense: {statistics.defensive.min.toFixed(2)} / {statistics.defensive.max.toFixed(2)} /
+				{statistics.defensive.mean.toFixed(2)}
 			</p>
 			<p>
-				Scenario: {statistics().scenario.min.toFixed(2)} / {statistics().scenario.max.toFixed(2)} / {statistics().scenario.mean.toFixed(
+				Scenario: {statistics.scenario.min.toFixed(2)} / {statistics.scenario.max.toFixed(2)} / {statistics.scenario.mean.toFixed(
 					2
 				)}
 			</p>
@@ -162,6 +245,7 @@
 				class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 {sortOrder === 'total'
 					? 'bg-orange-400 text-white'
 					: ''}"
+				data-testid="sort-total"
 				onclick={() => (sortOrder = 'total')}
 			>
 				Total rating ⬇
@@ -170,6 +254,7 @@
 				class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 {sortOrder === 'offensive'
 					? 'bg-orange-400 text-white'
 					: ''}"
+				data-testid="sort-offensive"
 				onclick={() => (sortOrder = 'offensive')}
 			>
 				Offensive rating ⬇
@@ -178,6 +263,7 @@
 				class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 {sortOrder === 'scenario'
 					? 'bg-orange-400 text-white'
 					: ''}"
+				data-testid="sort-scenario"
 				onclick={() => (sortOrder = 'scenario')}
 			>
 				Scenario rating ⬇
@@ -186,6 +272,7 @@
 				class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 {sortOrder === 'defensive'
 					? 'bg-orange-400 text-white'
 					: ''}"
+				data-testid="sort-defensive"
 				onclick={() => (sortOrder = 'defensive')}
 			>
 				Defensive rating ⬇
@@ -194,10 +281,37 @@
 		<br />
 
 		<div
-			class="grid grid-cols-1 gap-8 sm:!gap-x-10 sm:!grid-cols-2 lg:!grid-cols-4 lg:!gap-x-12 lg:!gap-y-10"
+			class="grid grid-cols-1 gap-8 sm:gap-x-10! sm:grid-cols-2! lg:grid-cols-4! lg:gap-x-12! lg:gap-y-10!"
 		>
-			{#each gameStatsSorted() as item}
+			{#each gameStatsSorted as item}
 				<GameCard gameStats={item} />
+			{/each}
+		</div>
+		<div>
+			<p class="grow font-bold text-xl">Statistics by team</p>
+			<p>Criteria : min / max / mean</p>
+			{#each statisticsPerTeam as stats}
+				<h3>{stats.teamName}</h3>
+				<p>
+					Total : {stats.total.min.toFixed(2)} / {stats.total.max.toFixed(2)} / {stats.total.mean.toFixed(
+						2
+					)}
+				</p>
+				<p>
+					Offense: {stats.offensive.min.toFixed(2)} / {stats.offensive.max.toFixed(2)}
+					/
+					{stats.offensive.mean.toFixed(2)}
+				</p>
+				<p>
+					Defense: {stats.defensive.min.toFixed(2)} / {stats.defensive.max.toFixed(2)}
+					/
+					{stats.defensive.mean.toFixed(2)}
+				</p>
+				<p>
+					Scenario: {stats.scenario.min.toFixed(2)} / {stats.scenario.max.toFixed(2)} /
+					{stats.scenario.mean.toFixed(2)}
+				</p>
+				<br />
 			{/each}
 		</div>
 	</div>

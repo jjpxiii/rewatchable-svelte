@@ -1,0 +1,2024 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home Page Snapshot > matches the snapshot 1`] = `
+<div>
+  <section>
+    <div>
+      <div>
+        <p
+          class="grow font-bold text-xl"
+        >
+          Year
+        </p>
+         
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+        >
+          <a
+            href="/2020"
+          >
+            All
+          </a>
+        </button>
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+        >
+          <a
+            href="/2021"
+          >
+            2021
+          </a>
+        </button>
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+        >
+          <a
+            href="/2022"
+          >
+            2022
+          </a>
+        </button>
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+        >
+          <a
+            href="/2023"
+          >
+            2023
+          </a>
+        </button>
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+        >
+          <a
+            href="/2024"
+          >
+            2024
+          </a>
+        </button>
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 bg-orange-400 text-white"
+        >
+          <a
+            href="/2025"
+          >
+            2025
+          </a>
+        </button>
+        <!---->
+      </div>
+       
+      <div>
+        <p
+          class="grow font-bold text-xl"
+        >
+          Weeks
+        </p>
+         
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 bg-orange-400 text-white"
+        >
+          All
+        </button>
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+        >
+          1
+        </button>
+        <!---->
+      </div>
+       
+      <div>
+        <p
+          class="grow font-bold text-xl"
+        >
+          Search
+        </p>
+         
+        <input
+          placeholder="Search games..."
+          type="text"
+        />
+      </div>
+       
+      <div>
+        <p
+          class="grow font-bold text-xl"
+        >
+          Statistics
+        </p>
+         
+        <p>
+          Criteria : min / max / mean
+        </p>
+         
+        <p>
+          Total : 122.00 / 178.00 / 147.94
+        </p>
+         
+        <p>
+          Offense: 72.00 / 95.00 /
+				83.13
+        </p>
+         
+        <p>
+          Defense: 1.00 / 16.00 /
+				8.50
+        </p>
+         
+        <p>
+          Scenario: 4.00 / 34.00 / 19.00
+        </p>
+      </div>
+       
+      <br />
+       
+      <div
+        class="flex gap-2 w-full"
+      >
+        <p
+          class="flex-grow-1 font-bold text-xl"
+        >
+          Sorted by total rating ⬇
+        </p>
+         
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 bg-orange-400 text-white"
+          data-testid="sort-total"
+        >
+          Total rating ⬇
+        </button>
+         
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+          data-testid="sort-offensive"
+        >
+          Offensive rating ⬇
+        </button>
+         
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+          data-testid="sort-scenario"
+        >
+          Scenario rating ⬇
+        </button>
+         
+        <button
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200 "
+          data-testid="sort-defensive"
+        >
+          Defensive rating ⬇
+        </button>
+      </div>
+       
+      <br />
+       
+      <div
+        class="grid grid-cols-1 gap-8 sm:gap-x-10! sm:grid-cols-2! lg:grid-cols-4! lg:gap-x-12! lg:gap-y-10!"
+      >
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/SF-TB-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 91 
+                <br />
+                 Scenario Rating 🍿 34 
+                <br />
+                 Defensive Big Plays 🚧 15 
+                <br />
+                 Total Rating 🧮 178
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                SF vs TB 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/LAC-LAR-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 92 
+                <br />
+                 Scenario Rating 🍿 28 
+                <br />
+                 Defensive Big Plays 🚧 11 
+                <br />
+                 Total Rating 🧮 171.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                LAC vs LAR 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/CAR-CHI-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 95 
+                <br />
+                 Scenario Rating 🍿 22 
+                <br />
+                 Defensive Big Plays 🚧 6 
+                <br />
+                 Total Rating 🧮 167.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                CAR vs CHI 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/NYJ-PHI-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 83 
+                <br />
+                 Scenario Rating 🍿 32 
+                <br />
+                 Defensive Big Plays 🚧 13 
+                <br />
+                 Total Rating 🧮 163
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                NYJ vs PHI 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/MIN-NE-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 81 
+                <br />
+                 Scenario Rating 🍿 30 
+                <br />
+                 Defensive Big Plays 🚧 12 
+                <br />
+                 Total Rating 🧮 157.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                MIN vs NE 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/HOU-IND-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 85 
+                <br />
+                 Scenario Rating 🍿 26 
+                <br />
+                 Defensive Big Plays 🚧 5 
+                <br />
+                 Total Rating 🧮 156
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                HOU vs IND 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/ARI-ATL-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 88 
+                <br />
+                 Scenario Rating 🍿 20 
+                <br />
+                 Defensive Big Plays 🚧 4 
+                <br />
+                 Total Rating 🧮 154
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                ARI vs ATL 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/DET-GB-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 90 
+                <br />
+                 Scenario Rating 🍿 14 
+                <br />
+                 Defensive Big Plays 🚧 8 
+                <br />
+                 Total Rating 🧮 153
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                DET vs GB 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/NO-NYG-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 89 
+                <br />
+                 Scenario Rating 🍿 8 
+                <br />
+                 Defensive Big Plays 🚧 1 
+                <br />
+                 Total Rating 🧮 142
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                NO vs NYG 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/CIN-CLE-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 80 
+                <br />
+                 Scenario Rating 🍿 16 
+                <br />
+                 Defensive Big Plays 🚧 10 
+                <br />
+                 Total Rating 🧮 141
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                CIN vs CLE 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/DAL-DEN-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 76 
+                <br />
+                 Scenario Rating 🍿 24 
+                <br />
+                 Defensive Big Plays 🚧 3 
+                <br />
+                 Total Rating 🧮 139.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                DAL vs DEN 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/JAX-KC-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 78 
+                <br />
+                 Scenario Rating 🍿 12 
+                <br />
+                 Defensive Big Plays 🚧 7 
+                <br />
+                 Total Rating 🧮 132.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                JAX vs KC 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/BAL-BUF-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 72 
+                <br />
+                 Scenario Rating 🍿 18 
+                <br />
+                 Defensive Big Plays 🚧 9 
+                <br />
+                 Total Rating 🧮 130.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                BAL vs BUF 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/TEN-WSH-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 79 
+                <br />
+                 Scenario Rating 🍿 4 
+                <br />
+                 Defensive Big Plays 🚧 16 
+                <br />
+                 Total Rating 🧮 130.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                TEN vs WSH 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/PIT-SEA-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 77 
+                <br />
+                 Scenario Rating 🍿 6 
+                <br />
+                 Defensive Big Plays 🚧 14 
+                <br />
+                 Total Rating 🧮 128.5
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                PIT vs SEA 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        <div
+          class="group relative"
+          data-testid="game-card"
+        >
+          <a
+            class="block"
+            href="/game/LV-MIA-2025-W1"
+          >
+            <div
+              class="w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative"
+            >
+              <p>
+                Offensive Rating 🎯 74 
+                <br />
+                 Scenario Rating 🍿 10 
+                <br />
+                 Defensive Big Plays 🚧 2 
+                <br />
+                 Total Rating 🧮 122
+              </p>
+               
+              <div
+                class="w-full h-full flex items-center justify-center bg-[rgba(255,255,255,0.6)] opacity-0 group-hover:opacity-100 transition-all duration-500"
+              >
+                Spoil me !
+              </div>
+            </div>
+             
+            <div
+              class="flex items-center justify-between mt-3"
+            >
+              <h3
+                class="text-lg text-gray-800 font-medium relative"
+                data-testid="game-card-name"
+              >
+                LV vs MIA 
+                <br />
+                 Week 1
+              </h3>
+            </div>
+          </a>
+           
+          <button
+            aria-pressed="false"
+            class="absolute top-2 right-2 p-2 rounded-full text-sm shadow-sm transition z-10 bg-white bg-opacity-80 text-amber-700 hover:bg-opacity-100"
+            title="Add to favorites"
+          >
+            <span
+              aria-hidden="true"
+              class="block text-base leading-none"
+            >
+              🏈
+            </span>
+             
+            <span
+              class="sr-only"
+            >
+              Add to favorites
+            </span>
+          </button>
+        </div>
+        
+        
+      </div>
+       
+      <div>
+        <p
+          class="grow font-bold text-xl"
+        >
+          Statistics by team
+        </p>
+         
+        <p>
+          Criteria : min / max / mean
+        </p>
+         
+        <h3>
+          ARI
+        </h3>
+         
+        <p>
+          Total : 154.00 / 154.00 / 154.00
+        </p>
+         
+        <p>
+          Offense: 88.00 / 88.00
+					/
+					88.00
+        </p>
+         
+        <p>
+          Defense: 4.00 / 4.00
+					/
+					4.00
+        </p>
+         
+        <p>
+          Scenario: 20.00 / 20.00 /
+					20.00
+        </p>
+         
+        <br />
+        <h3>
+          ATL
+        </h3>
+         
+        <p>
+          Total : 154.00 / 154.00 / 154.00
+        </p>
+         
+        <p>
+          Offense: 88.00 / 88.00
+					/
+					88.00
+        </p>
+         
+        <p>
+          Defense: 4.00 / 4.00
+					/
+					4.00
+        </p>
+         
+        <p>
+          Scenario: 20.00 / 20.00 /
+					20.00
+        </p>
+         
+        <br />
+        <h3>
+          BAL
+        </h3>
+         
+        <p>
+          Total : 130.50 / 130.50 / 130.50
+        </p>
+         
+        <p>
+          Offense: 72.00 / 72.00
+					/
+					72.00
+        </p>
+         
+        <p>
+          Defense: 9.00 / 9.00
+					/
+					9.00
+        </p>
+         
+        <p>
+          Scenario: 18.00 / 18.00 /
+					18.00
+        </p>
+         
+        <br />
+        <h3>
+          BUF
+        </h3>
+         
+        <p>
+          Total : 130.50 / 130.50 / 130.50
+        </p>
+         
+        <p>
+          Offense: 72.00 / 72.00
+					/
+					72.00
+        </p>
+         
+        <p>
+          Defense: 9.00 / 9.00
+					/
+					9.00
+        </p>
+         
+        <p>
+          Scenario: 18.00 / 18.00 /
+					18.00
+        </p>
+         
+        <br />
+        <h3>
+          CAR
+        </h3>
+         
+        <p>
+          Total : 167.50 / 167.50 / 167.50
+        </p>
+         
+        <p>
+          Offense: 95.00 / 95.00
+					/
+					95.00
+        </p>
+         
+        <p>
+          Defense: 6.00 / 6.00
+					/
+					6.00
+        </p>
+         
+        <p>
+          Scenario: 22.00 / 22.00 /
+					22.00
+        </p>
+         
+        <br />
+        <h3>
+          CHI
+        </h3>
+         
+        <p>
+          Total : 167.50 / 167.50 / 167.50
+        </p>
+         
+        <p>
+          Offense: 95.00 / 95.00
+					/
+					95.00
+        </p>
+         
+        <p>
+          Defense: 6.00 / 6.00
+					/
+					6.00
+        </p>
+         
+        <p>
+          Scenario: 22.00 / 22.00 /
+					22.00
+        </p>
+         
+        <br />
+        <h3>
+          CIN
+        </h3>
+         
+        <p>
+          Total : 141.00 / 141.00 / 141.00
+        </p>
+         
+        <p>
+          Offense: 80.00 / 80.00
+					/
+					80.00
+        </p>
+         
+        <p>
+          Defense: 10.00 / 10.00
+					/
+					10.00
+        </p>
+         
+        <p>
+          Scenario: 16.00 / 16.00 /
+					16.00
+        </p>
+         
+        <br />
+        <h3>
+          CLE
+        </h3>
+         
+        <p>
+          Total : 141.00 / 141.00 / 141.00
+        </p>
+         
+        <p>
+          Offense: 80.00 / 80.00
+					/
+					80.00
+        </p>
+         
+        <p>
+          Defense: 10.00 / 10.00
+					/
+					10.00
+        </p>
+         
+        <p>
+          Scenario: 16.00 / 16.00 /
+					16.00
+        </p>
+         
+        <br />
+        <h3>
+          DAL
+        </h3>
+         
+        <p>
+          Total : 139.50 / 139.50 / 139.50
+        </p>
+         
+        <p>
+          Offense: 76.00 / 76.00
+					/
+					76.00
+        </p>
+         
+        <p>
+          Defense: 3.00 / 3.00
+					/
+					3.00
+        </p>
+         
+        <p>
+          Scenario: 24.00 / 24.00 /
+					24.00
+        </p>
+         
+        <br />
+        <h3>
+          DEN
+        </h3>
+         
+        <p>
+          Total : 139.50 / 139.50 / 139.50
+        </p>
+         
+        <p>
+          Offense: 76.00 / 76.00
+					/
+					76.00
+        </p>
+         
+        <p>
+          Defense: 3.00 / 3.00
+					/
+					3.00
+        </p>
+         
+        <p>
+          Scenario: 24.00 / 24.00 /
+					24.00
+        </p>
+         
+        <br />
+        <h3>
+          DET
+        </h3>
+         
+        <p>
+          Total : 153.00 / 153.00 / 153.00
+        </p>
+         
+        <p>
+          Offense: 90.00 / 90.00
+					/
+					90.00
+        </p>
+         
+        <p>
+          Defense: 8.00 / 8.00
+					/
+					8.00
+        </p>
+         
+        <p>
+          Scenario: 14.00 / 14.00 /
+					14.00
+        </p>
+         
+        <br />
+        <h3>
+          GB
+        </h3>
+         
+        <p>
+          Total : 153.00 / 153.00 / 153.00
+        </p>
+         
+        <p>
+          Offense: 90.00 / 90.00
+					/
+					90.00
+        </p>
+         
+        <p>
+          Defense: 8.00 / 8.00
+					/
+					8.00
+        </p>
+         
+        <p>
+          Scenario: 14.00 / 14.00 /
+					14.00
+        </p>
+         
+        <br />
+        <h3>
+          HOU
+        </h3>
+         
+        <p>
+          Total : 156.00 / 156.00 / 156.00
+        </p>
+         
+        <p>
+          Offense: 85.00 / 85.00
+					/
+					85.00
+        </p>
+         
+        <p>
+          Defense: 5.00 / 5.00
+					/
+					5.00
+        </p>
+         
+        <p>
+          Scenario: 26.00 / 26.00 /
+					26.00
+        </p>
+         
+        <br />
+        <h3>
+          IND
+        </h3>
+         
+        <p>
+          Total : 156.00 / 156.00 / 156.00
+        </p>
+         
+        <p>
+          Offense: 85.00 / 85.00
+					/
+					85.00
+        </p>
+         
+        <p>
+          Defense: 5.00 / 5.00
+					/
+					5.00
+        </p>
+         
+        <p>
+          Scenario: 26.00 / 26.00 /
+					26.00
+        </p>
+         
+        <br />
+        <h3>
+          JAX
+        </h3>
+         
+        <p>
+          Total : 132.50 / 132.50 / 132.50
+        </p>
+         
+        <p>
+          Offense: 78.00 / 78.00
+					/
+					78.00
+        </p>
+         
+        <p>
+          Defense: 7.00 / 7.00
+					/
+					7.00
+        </p>
+         
+        <p>
+          Scenario: 12.00 / 12.00 /
+					12.00
+        </p>
+         
+        <br />
+        <h3>
+          KC
+        </h3>
+         
+        <p>
+          Total : 132.50 / 132.50 / 132.50
+        </p>
+         
+        <p>
+          Offense: 78.00 / 78.00
+					/
+					78.00
+        </p>
+         
+        <p>
+          Defense: 7.00 / 7.00
+					/
+					7.00
+        </p>
+         
+        <p>
+          Scenario: 12.00 / 12.00 /
+					12.00
+        </p>
+         
+        <br />
+        <h3>
+          LAC
+        </h3>
+         
+        <p>
+          Total : 171.50 / 171.50 / 171.50
+        </p>
+         
+        <p>
+          Offense: 92.00 / 92.00
+					/
+					92.00
+        </p>
+         
+        <p>
+          Defense: 11.00 / 11.00
+					/
+					11.00
+        </p>
+         
+        <p>
+          Scenario: 28.00 / 28.00 /
+					28.00
+        </p>
+         
+        <br />
+        <h3>
+          LAR
+        </h3>
+         
+        <p>
+          Total : 171.50 / 171.50 / 171.50
+        </p>
+         
+        <p>
+          Offense: 92.00 / 92.00
+					/
+					92.00
+        </p>
+         
+        <p>
+          Defense: 11.00 / 11.00
+					/
+					11.00
+        </p>
+         
+        <p>
+          Scenario: 28.00 / 28.00 /
+					28.00
+        </p>
+         
+        <br />
+        <h3>
+          LV
+        </h3>
+         
+        <p>
+          Total : 122.00 / 122.00 / 122.00
+        </p>
+         
+        <p>
+          Offense: 74.00 / 74.00
+					/
+					74.00
+        </p>
+         
+        <p>
+          Defense: 2.00 / 2.00
+					/
+					2.00
+        </p>
+         
+        <p>
+          Scenario: 10.00 / 10.00 /
+					10.00
+        </p>
+         
+        <br />
+        <h3>
+          MIA
+        </h3>
+         
+        <p>
+          Total : 122.00 / 122.00 / 122.00
+        </p>
+         
+        <p>
+          Offense: 74.00 / 74.00
+					/
+					74.00
+        </p>
+         
+        <p>
+          Defense: 2.00 / 2.00
+					/
+					2.00
+        </p>
+         
+        <p>
+          Scenario: 10.00 / 10.00 /
+					10.00
+        </p>
+         
+        <br />
+        <h3>
+          MIN
+        </h3>
+         
+        <p>
+          Total : 157.50 / 157.50 / 157.50
+        </p>
+         
+        <p>
+          Offense: 81.00 / 81.00
+					/
+					81.00
+        </p>
+         
+        <p>
+          Defense: 12.00 / 12.00
+					/
+					12.00
+        </p>
+         
+        <p>
+          Scenario: 30.00 / 30.00 /
+					30.00
+        </p>
+         
+        <br />
+        <h3>
+          NE
+        </h3>
+         
+        <p>
+          Total : 157.50 / 157.50 / 157.50
+        </p>
+         
+        <p>
+          Offense: 81.00 / 81.00
+					/
+					81.00
+        </p>
+         
+        <p>
+          Defense: 12.00 / 12.00
+					/
+					12.00
+        </p>
+         
+        <p>
+          Scenario: 30.00 / 30.00 /
+					30.00
+        </p>
+         
+        <br />
+        <h3>
+          NO
+        </h3>
+         
+        <p>
+          Total : 142.00 / 142.00 / 142.00
+        </p>
+         
+        <p>
+          Offense: 89.00 / 89.00
+					/
+					89.00
+        </p>
+         
+        <p>
+          Defense: 1.00 / 1.00
+					/
+					1.00
+        </p>
+         
+        <p>
+          Scenario: 8.00 / 8.00 /
+					8.00
+        </p>
+         
+        <br />
+        <h3>
+          NYG
+        </h3>
+         
+        <p>
+          Total : 142.00 / 142.00 / 142.00
+        </p>
+         
+        <p>
+          Offense: 89.00 / 89.00
+					/
+					89.00
+        </p>
+         
+        <p>
+          Defense: 1.00 / 1.00
+					/
+					1.00
+        </p>
+         
+        <p>
+          Scenario: 8.00 / 8.00 /
+					8.00
+        </p>
+         
+        <br />
+        <h3>
+          NYJ
+        </h3>
+         
+        <p>
+          Total : 163.00 / 163.00 / 163.00
+        </p>
+         
+        <p>
+          Offense: 83.00 / 83.00
+					/
+					83.00
+        </p>
+         
+        <p>
+          Defense: 13.00 / 13.00
+					/
+					13.00
+        </p>
+         
+        <p>
+          Scenario: 32.00 / 32.00 /
+					32.00
+        </p>
+         
+        <br />
+        <h3>
+          PHI
+        </h3>
+         
+        <p>
+          Total : 163.00 / 163.00 / 163.00
+        </p>
+         
+        <p>
+          Offense: 83.00 / 83.00
+					/
+					83.00
+        </p>
+         
+        <p>
+          Defense: 13.00 / 13.00
+					/
+					13.00
+        </p>
+         
+        <p>
+          Scenario: 32.00 / 32.00 /
+					32.00
+        </p>
+         
+        <br />
+        <h3>
+          PIT
+        </h3>
+         
+        <p>
+          Total : 128.50 / 128.50 / 128.50
+        </p>
+         
+        <p>
+          Offense: 77.00 / 77.00
+					/
+					77.00
+        </p>
+         
+        <p>
+          Defense: 14.00 / 14.00
+					/
+					14.00
+        </p>
+         
+        <p>
+          Scenario: 6.00 / 6.00 /
+					6.00
+        </p>
+         
+        <br />
+        <h3>
+          SEA
+        </h3>
+         
+        <p>
+          Total : 128.50 / 128.50 / 128.50
+        </p>
+         
+        <p>
+          Offense: 77.00 / 77.00
+					/
+					77.00
+        </p>
+         
+        <p>
+          Defense: 14.00 / 14.00
+					/
+					14.00
+        </p>
+         
+        <p>
+          Scenario: 6.00 / 6.00 /
+					6.00
+        </p>
+         
+        <br />
+        <h3>
+          SF
+        </h3>
+         
+        <p>
+          Total : 178.00 / 178.00 / 178.00
+        </p>
+         
+        <p>
+          Offense: 91.00 / 91.00
+					/
+					91.00
+        </p>
+         
+        <p>
+          Defense: 15.00 / 15.00
+					/
+					15.00
+        </p>
+         
+        <p>
+          Scenario: 34.00 / 34.00 /
+					34.00
+        </p>
+         
+        <br />
+        <h3>
+          TB
+        </h3>
+         
+        <p>
+          Total : 178.00 / 178.00 / 178.00
+        </p>
+         
+        <p>
+          Offense: 91.00 / 91.00
+					/
+					91.00
+        </p>
+         
+        <p>
+          Defense: 15.00 / 15.00
+					/
+					15.00
+        </p>
+         
+        <p>
+          Scenario: 34.00 / 34.00 /
+					34.00
+        </p>
+         
+        <br />
+        <h3>
+          TEN
+        </h3>
+         
+        <p>
+          Total : 130.50 / 130.50 / 130.50
+        </p>
+         
+        <p>
+          Offense: 79.00 / 79.00
+					/
+					79.00
+        </p>
+         
+        <p>
+          Defense: 16.00 / 16.00
+					/
+					16.00
+        </p>
+         
+        <p>
+          Scenario: 4.00 / 4.00 /
+					4.00
+        </p>
+         
+        <br />
+        <h3>
+          WSH
+        </h3>
+         
+        <p>
+          Total : 130.50 / 130.50 / 130.50
+        </p>
+         
+        <p>
+          Offense: 79.00 / 79.00
+					/
+					79.00
+        </p>
+         
+        <p>
+          Defense: 16.00 / 16.00
+					/
+					16.00
+        </p>
+         
+        <p>
+          Scenario: 4.00 / 4.00 /
+					4.00
+        </p>
+         
+        <br />
+        <!---->
+      </div>
+    </div>
+  </section>
+  
+  
+</div>
+`;

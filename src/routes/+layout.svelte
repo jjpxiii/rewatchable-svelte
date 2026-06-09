@@ -1,12 +1,57 @@
 <script lang="ts">
-	import Header from './Header.svelte';
 	import '../app.css';
+import { favorites } from '$lib/favorites';
 
-	let { children } = $props();
+	interface LayoutData {
+		session: App.Locals['session'];
+		user: App.Locals['user'];
+		watchListIds: string[];
+	}
+
+	const { data, children } = $props() as { data: LayoutData; children: import('svelte').Snippet };
+
+	$effect(() => {
+		favorites.sync(data.watchListIds, Boolean(data.session));
+	});
+
+	const signOut = async () => {
+		const response = await fetch('/api/auth/sign-out', {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: '{}'
+		});
+		if (!response.ok) {
+			return;
+		}
+
+		favorites.clear();
+		window.location.assign('/');
+	};
 </script>
 
 <div class="app">
 	<!-- <Header /> -->
+	<nav class="flex items-center justify-between gap-4 py-4">
+		<a href="/" class="text-lg font-semibold text-gray-900 hover:text-amber-700">
+			Rewatchable Games
+		</a>
+		<a href="/favorites" class="text-sm font-medium text-amber-700 hover:text-amber-800">
+			Watch list ({$favorites.length})
+		</a>
+		{#if data.session}
+			<button
+				type="button"
+				class="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
+				onclick={signOut}
+			>
+				Sign out
+			</button>
+		{:else}
+			<a href="/login" class="text-sm font-medium text-gray-700 hover:text-gray-900">Sign in</a>
+		{/if}
+	</nav>
 
 	<main>
 		{@render children()}

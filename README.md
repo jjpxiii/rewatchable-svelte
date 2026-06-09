@@ -36,3 +36,26 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Auth + Watch List (BetterAuth + D1)
+
+1. Create a D1 database:
+
+```bash
+wrangler d1 create rewatchable
+```
+
+2. Put the returned `database_id` into `wrangler.jsonc` under `d1_databases[0].database_id`.
+3. Set auth secrets:
+
+```bash
+wrangler secret put BETTER_AUTH_SECRET
+wrangler secret put BETTER_AUTH_URL
+```
+
+4. Apply migrations:
+
+```bash
+pnpm db:migrate:local
+pnpm db:migrate:remote
+```

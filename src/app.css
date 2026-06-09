@@ -1,6 +1,6 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@import '@fontsource/fira-mono';
+@import "@fontsource/fira-mono";
 /* 
 :root {
 	--font-body:
